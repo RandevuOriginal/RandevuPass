@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "80377082688",
+    "project_id": "randevu-29eea",
+    "storage_bucket": "randevu-29eea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80377082688:android:de04c8a3e28ef1ebb3c0a5",
+        "android_client_info": {
+          "package_name": "com.randevuCompany.randevu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80377082688-fdpfeb8ikj36rq0hm1scn8ths14sf9ic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdUHMR9JaDNWV8epV2PT4drnsajv223qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80377082688-fdpfeb8ikj36rq0hm1scn8ths14sf9ic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

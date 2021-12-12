@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Randevu</string>
+        <string name="logo">RANDEVU</string>
+        <string name="ep">Button</string>
+        <string name="prl">Button</string>
+        <string name="vt">Button</string>
+        <string name="rgs">Button</string>
+        <string name="login">Войти</string>
+        <string name="app">Your</string>
+        <string name="reg">регистрация</string>
+        <string name="email">Электронная почта</string>
+        <string name="password">Пароль</string>
+        <string name="sc1">sc!</string>
+        <string name="sc2">sc2</string>
+        <string name="lt">lg</string>
+        <string name="reg_t">РЕГИСТРАЦИЯ</string>
+
+        // Profile
+        <string name="about_desc">Мария,21\nФотограф,иллюстратор</string>
+        <string name="about_hobbies">Люблю путешествия, фильмы, прогулки с друзьями и вкусную еду\nИщу новые знакомтва по интересам, так что пиши;)</string>
+        <string name="blablabla">Майкл/nБлаблабла</string>
+
+        <!--    <string name="app_name" tools:ignore="DuplicateDefinition">DropdownMeny</string>-->
+        <string name="select">Выберете Гендер</string>
+    </resources>
