@@ -69,19 +69,19 @@
         android:text="персональные данные"
         android:textColor="#FFFFFFFF"
         android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/personalCaseNameEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.293"
+        app:layout_constraintVertical_bias="0.736"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/personalCaseNameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/white_field"
         android:ems="11"
         android:fontFamily="@font/diffont"
@@ -89,59 +89,38 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#FF000000"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+        app:layout_constraintBottom_toTopOf="@+id/personalCaseBirthdayEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/personalCaseBirthdayEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/white_field"
         android:ems="11"
         android:fontFamily="@font/diffont"
-        android:hint=" Укажите дату рождения"
-        android:inputType="textPersonName"
+        android:hint=" Укажите возраст"
+        android:inputType="number"
         android:minHeight="48dp"
         android:textColorHint="#FF000000"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName10"
+        app:layout_constraintBottom_toTopOf="@+id/personalCaseSpinnerGender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/white_field"
-        android:ems="11"
-        android:fontFamily="@font/diffont"
-        android:hint=" Кто вас интересует?"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColorHint="#FF000000"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <SeekBar
-        android:id="@+id/seekBar2"
-        android:layout_width="217dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="16dp"
-        android:max="70"
-        android:min="18"
+    <Spinner
+        android:id="@+id/personalCaseSpinnerGender"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="96dp"
         app:layout_constraintBottom_toTopOf="@+id/personalCaseContinueButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.747" />
 
     <Button
         android:id="@+id/personalCaseContinueButton"
@@ -159,5 +138,46 @@
         app:layout_constraintTop_toTopOf="@+id/imageView10"
         app:layout_constraintVertical_bias="0.907"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/personalCaseTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите свой пол"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.561"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/personalCaseTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите свою ориентацию"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.691"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/personalCaseSpinnerOrientation"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="92dp"
+        app:layout_constraintBottom_toTopOf="@+id/personalCaseContinueButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.911" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

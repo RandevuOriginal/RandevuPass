@@ -90,23 +90,23 @@
     <Button
         android:id="@+id/activityMainSignInButton"
         android:layout_width="200dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/rounded_mplus_bold"
+        android:onClick="onClickSignIn"
         android:text="Войти"
+        android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/activityMainSignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="13dp"
-        android:layout_marginBottom="15dp"
-        android:onClick="onClickSignIn"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/activityMainSignUpButton"
         android:layout_width="200dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/rounded_mplus_bold"
         android:onClick="onClickSignUp"
@@ -123,7 +123,7 @@
     <EditText
         android:id="@+id/activityMainEmail"
         android:layout_width="207dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@color/white"
         android:ems="10"
         android:hint="@string/email"
@@ -140,7 +140,7 @@
     <EditText
         android:id="@+id/activityMainPassword"
         android:layout_width="207dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@color/white"
         android:ems="10"
         android:hint="@string/password"
