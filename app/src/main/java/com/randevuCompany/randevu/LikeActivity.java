@@ -140,6 +140,16 @@ public class LikeActivity extends AppCompatActivity {
     }
 
     public void onClickLike(View view) {
+        if(flag==0){
+            User user = (User) usersArray[usersArray.length-1];
+            String id=user.getId();
+            ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+        }
+        else{
+            User user = (User) usersArray[flag-1];
+            String id=user.getId();
+            ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+        }
         flagPhoto=0;
         if (usersArray.length != 0) {
             if (flag < usersArray.length - 1) {
