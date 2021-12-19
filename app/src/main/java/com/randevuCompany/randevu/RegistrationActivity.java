@@ -77,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
-    public void signUp(View view) {
+    public void signUp() {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
     }
@@ -95,12 +95,12 @@ public class RegistrationActivity extends AppCompatActivity {
                                 ref.child("Users").child(user.getUid()).child("email").setValue(emailText.getText().toString());
                                 ref.child("Users").child(user.getUid()).child("name").setValue(userName);
                                 System.out.println(uploadPhoto);
-                                ref.child("Users").child(user.getUid()).child("photo").setValue(uploadPhoto);
+                                ref.child("Users").child(user.getUid()).child("photo").push().setValue(uploadPhoto);
                                 ref.child("Users").child(user.getUid()).child("description").setValue(description);
                                 ref.child("Users").child(user.getUid()).child("gender").setValue(gender);
                                 ref.child("Users").child(user.getUid()).child("orientation").setValue(orientation);
                                 ref.child("Users").child(user.getUid()).child("age").setValue(age);
-                                signUp(view);
+                                signUp();
                             } else {
                                 Toast.makeText(getApplicationContext(), "Регистрция не прошла", Toast.LENGTH_SHORT).show();
                             }

@@ -13,7 +13,6 @@
         android:layout_height="315dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.386"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.298"
@@ -97,6 +96,32 @@
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileLayoutDescriptionTextView" />
+
+    <Button
+        android:id="@+id/profileLayoutRightButton"
+        android:layout_width="61dp"
+        android:layout_height="150dp"
+        android:background="@drawable/gradient"
+        android:onClick="onClickRight"
+        app:layout_constraintBottom_toBottomOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintTop_toTopOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <Button
+        android:id="@+id/profileLayoutLeftButton"
+        android:layout_width="61dp"
+        android:layout_height="150dp"
+        android:background="@drawable/gradient"
+        android:onClick="onClickLeft"
+        app:layout_constraintBottom_toBottomOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintEnd_toEndOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileLayoutPhotoImageView"
+        app:layout_constraintVertical_bias="0.484" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

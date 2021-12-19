@@ -1,7 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/mainBgColor"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".SettingsActivity">
+
+
+        <ImageButton
+            android:id="@+id/settingsImageButton1"
+            android:layout_width="156dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="16dp"
+            android:onClick="onClickAddPhoto1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_sec"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <ImageButton
+            android:id="@+id/settingsImageButton2"
+            android:layout_width="156dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickAddPhoto2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.582"
+            app:layout_constraintStart_toEndOf="@+id/settingsImageButton4"
+            app:layout_constraintTop_toBottomOf="@+id/settingsImageButton3"
+            app:srcCompat="@drawable/profile_sec"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/settingsImageButton3"
+            android:layout_width="156dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="16dp"
+            android:onClick="onClickAddPhoto3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.582"
+            app:layout_constraintStart_toEndOf="@+id/settingsImageButton1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_sec"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/settingsImageButton4"
+            android:layout_width="156dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickAddPhoto4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsImageButton1"
+            app:srcCompat="@drawable/profile_sec"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/settingsNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_field"
+            android:ems="11"
+            android:fontFamily="@font/diffont"
+            android:hint="  Ведите Ваше имя       "
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#FF000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsImageButton4"
+            tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/settingsDescriptionText"
+        android:layout_width="322dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_field"
+        android:ems="11"
+
+        android:fontFamily="@font/diffont"
+        android:hint="  Ведите Ваше описание       "
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColorHint="#FF000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsNameText"
+        tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/settingsSaveButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/rounded_mplus_bold"
+            android:onClick="onClickSave"
+            android:text="Сохранить"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsDescriptionText"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

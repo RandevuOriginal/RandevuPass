@@ -18,6 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -29,6 +32,9 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView secondInfoView;
     private TextView descriptionView;
     private ImageView imageView;
+    private List photos;
+    private Object[] photosArray;
+    private int flag=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +53,14 @@ public class ProfileActivity extends AppCompatActivity {
                secondInfoView.setText(gender+",  "+orient);
                String description = snapshot.child("description").getValue().toString();
                descriptionView.setText(description);
-               String photo= snapshot.child("photo").getValue().toString();
-               Picasso.get().load(photo).into(imageView);
+
+                   photos = new ArrayList<>();
+                   for (DataSnapshot ds : snapshot.child("photo").getChildren()) {
+                       photos.add(ds.getValue().toString());
+                   }
+                   photosArray = photos.toArray();
+                   Picasso.get().load((String) photosArray[flag]).into(imageView);
+
            }
 
            @Override
@@ -93,5 +105,27 @@ public class ProfileActivity extends AppCompatActivity {
     public void onClickSettings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickRight(View view) {
+        System.out.println("right");
+        if(flag<photosArray.length-1) {
+            flag++;
+            Picasso.get().load((String) photosArray[flag]).into(imageView);
+        }
+        else {
+            Picasso.get().load((String) photosArray[photosArray.length-1]).into(imageView);
+        }
+    }
+
+    public void onClickLeft(View view) {
+        System.out.println("left");
+        if(flag>0) {
+            flag--;
+            Picasso.get().load((String) photosArray[flag]).into(imageView);
+        }
+        else {
+            Picasso.get().load((String) photosArray[flag]).into(imageView);
+        }
     }
 }
