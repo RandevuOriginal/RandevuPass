@@ -108,7 +108,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickRight(View view) {
-        System.out.println("right");
         if(flag<photosArray.length-1) {
             flag++;
             Picasso.get().load((String) photosArray[flag]).into(imageView);
@@ -119,7 +118,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickLeft(View view) {
-        System.out.println("left");
         if(flag>0) {
             flag--;
             Picasso.get().load((String) photosArray[flag]).into(imageView);
