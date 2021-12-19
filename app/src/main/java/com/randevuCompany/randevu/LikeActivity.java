@@ -143,12 +143,46 @@ public class LikeActivity extends AppCompatActivity {
         if(flag==0){
             User user = (User) usersArray[usersArray.length-1];
             String id=user.getId();
-            ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+            ref.child("Users").child(user.getId()).child("like").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    boolean b=true;
+                    for (DataSnapshot dsp : snapshot.getChildren()) {
+                        if(id.equals(dsp.getValue().toString())){
+                            b=false;
+                        }
+                    }
+                    if(b==true){
+                        ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
         }
         else{
             User user = (User) usersArray[flag-1];
             String id=user.getId();
-            ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+            ref.child("Users").child(user.getId()).child("like").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    boolean b=true;
+                    for (DataSnapshot dsp : snapshot.getChildren()) {
+                        if(id.equals(dsp.getValue().toString())){
+                            b=false;
+                        }
+                    }
+                    if(b==true){
+                        ref.child("Users").child(currentUser.getUid()).child("like").push().setValue(id);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
         }
         flagPhoto=0;
         if (usersArray.length != 0) {
